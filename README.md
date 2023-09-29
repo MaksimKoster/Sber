@@ -2,10 +2,10 @@
 ## Тестовое задание для команды "AI и исследование данных" в ДРКБ.   
 
 ## Data
-`diabets/data/raw/diabetes_train_analysis.csv` - датасет для обучения, инфа о здоровье  
-`diabets/data/raw/diabetes_train_info.csv` - датасет для обучения, инфа о пациенте    
-`diabets/data/raw/diabetes_test_analysis.csv` - датасет для тестирования, инфа о здоровье  
-`diabets/data/raw/diabetes_test_info.csv` - датасет для тестирования, инфа о пациенте  
+`/data/raw/diabetes_train_analysis.csv` - датасет для обучения, инфа о здоровье  
+`/data/raw/diabetes_train_info.csv` - датасет для обучения, инфа о пациенте    
+`/data/raw/diabetes_test_analysis.csv` - датасет для тестирования, инфа о здоровье  
+`/data/raw/diabetes_test_info.csv` - датасет для тестирования, инфа о пациенте  
 
 ## Techs
 - [MLflow](https://mlflow.org) - An open source platform for the machine learning lifecycle.
