@@ -11,6 +11,7 @@ from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler
 from sklearn.utils import shuffle
 import warnings
+import os
 
 def get_age(x):
     x = str(x)
@@ -136,6 +137,12 @@ def process_data(df_test_analysis, df_test_info,
 @hydra.main(config_path='../configs',config_name='data.yaml')
 def main(config):
     warnings.filterwarnings("ignore")
+
+    out_dir = utils.get_original_cwd() + '/data/processed'
+
+    if not os.path.exists(out_dir):
+        os.makedirs(out_dir)
+
     train_analysis = pd.read_csv(utils.get_original_cwd() + '/' + config.data.train.analysis)
     train_info = pd.read_csv(utils.get_original_cwd() + '/' + config.data.train.info)
     test_analysis = pd.read_csv(utils.get_original_cwd() + '/' + config.data.test.analysis)
