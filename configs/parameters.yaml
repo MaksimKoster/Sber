@@ -1,0 +1,22 @@
+processed_data:
+  features:
+    train: data/processed/train_features.csv
+    test: data/processed/test_features.csv
+  target:
+    train: data/processed/train_target.csv
+    test: data/processed/test_target.csv
+
+mlflow:
+  experiment_name: diabetes
+
+defaults:
+  - model: svc
+
+GridSearchCV:
+  scoring: f1_macro
+  cv: 5
+  n_jobs: 4
+
+metrics:
+  score: metrics.f1_score
+  average: macro

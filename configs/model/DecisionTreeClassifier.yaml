@@ -1,0 +1,6 @@
+model: DecisionTreeClassifier
+
+hyperparameters:
+  classifier__splitter: ['best', 'random']
+  classifier__max_features: ['auto', 'sqrt', 'log2']
+  classifier__max_depth: [5, 8, 15, 25, 30]

@@ -1,0 +1,15 @@
+data:
+  train:
+    analysis: data/raw/diabetes_train_analysis.csv
+    info: data/raw/diabetes_train_info.csv
+  test:
+    analysis: data/raw/diabetes_test_analysis.csv
+    info: data/raw/diabetes_test_info.csv
+
+processed_data:
+  train:
+    target: data/processed/train_target.csv
+    features: data/processed/train_features.csv
+  test:
+    target: data/processed/test_target.csv
+    features: data/processed/test_features.csv

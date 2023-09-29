@@ -1,0 +1,6 @@
+model: KNeighborsClassifier
+
+hyperparameters:
+  classifier__n_neighbors: [3, 5, 7]
+  classifier__algorithm: ['auto', 'ball_tree', 'kd_tree', 'brute']
+  classifier__p: [1.0, 2.0]
