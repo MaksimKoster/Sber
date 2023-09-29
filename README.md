@@ -26,6 +26,11 @@ Activate environment
 conda activate SberTask
 ```
 
+## DVC (Get Data)
+```sh
+dvc pull
+```
+
 ## Run
 Run preprocess, tune, predict, pipeline
 #### You can change parameters in make file

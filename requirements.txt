@@ -1,3 +1,0 @@
-mlflow
-hydra-core 
-pydantic==1.10.11
