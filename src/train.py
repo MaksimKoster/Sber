@@ -24,7 +24,7 @@ import pandas as pd
 from sklearn.model_selection import GridSearchCV
 
 import os
-from train_pipeline import pipeline
+from train_model_pipeline import pipeline
 
 @hydra.main(config_path='../configs', config_name='parameters')
 def main(config):
