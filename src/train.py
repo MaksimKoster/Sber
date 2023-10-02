@@ -64,14 +64,20 @@ def main(config):
 
 		grid_search.fit(X_train, y_train.values.ravel())
 
-		labels_pred = grid_search.predict(X_test)
+		labels_pred_test = grid_search.predict(X_test)
+		labels_pred_train = grid_search.predict(X_train)
 
-		print(confusion_matrix(y_test, labels_pred))
-		print(metrics.f1_score(y_test, labels_pred, average='macro'))
+		print(confusion_matrix(y_test, labels_pred_test))
+		print(metrics.f1_score(y_test, labels_pred_test, average='macro'))
+
+		print(confusion_matrix(y_train, labels_pred_train))
+		print(metrics.f1_score(y_train, labels_pred_train, average='macro'))
 
 		mlflow.log_params(grid_search.best_params_)
 		mlflow.log_artifacts(utils.to_absolute_path("configs"))
-		mlflow.log_metric('f1_macro', eval(config.metrics.score)(y_test, labels_pred, average = config.metrics.average))
+
+		mlflow.log_metric('f1_macro_test', eval(config.metrics.score)(y_test, labels_pred_test, average = config.metrics.average))
+		mlflow.log_metric('f1_macro_train', eval(config.metrics.score)(y_train, labels_pred_train, average = config.metrics.average))
 
 		mlflow.sklearn.log_model(grid_search, 'best-{}'.format(config['model']['model']))
 		

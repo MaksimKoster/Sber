@@ -13,3 +13,11 @@ processed_data:
   test:
     target: data/processed/test_target.csv
     features: data/processed/test_features.csv
+
+processed_data_no_weight:
+  train:
+    target: data/processed/train_no_weight_target.csv
+    features: data/processed/train_no_weight_features.csv
+  test:
+    target: data/processed/test_no_weight_target.csv
+    features: data/processed/test_no_weight_features.csv
