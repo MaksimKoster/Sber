@@ -1,11 +1,7 @@
-import csv
-import argparse
-from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, precision_recall_fscore_support, roc_auc_score
 from sklearn import metrics, preprocessing
 
 from sklearn import svm, datasets
-from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GridSearchCV
 
 import mlflow
