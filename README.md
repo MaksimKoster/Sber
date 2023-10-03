@@ -19,7 +19,7 @@
 
 Install environment and libs.
 ```sh
-bash create.sh
+bash create_env.sh
 ```
 Activate environment
 ```sh
