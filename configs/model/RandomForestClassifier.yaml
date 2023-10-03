@@ -1,7 +1,7 @@
 model: RandomForestClassifier
 
 hyperparameters:
-  classifier__n_estimators: [100, 300, 500, 800, 1200]
+  classifier__n_estimators: [10, 30, 60, 100, 150]
   classifier__max_features: ['auto', 'sqrt']
   classifier__max_depth: [5, 8, 15, 25, 30]
   classifier__bootstrap : [True, False]
